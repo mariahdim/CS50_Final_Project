@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Faves
+{% endblock %}
+
+{% block main %}
+
+  <div class="container" id="container1">
+    <h3>Check all the meals you enjoyed!</h3>
+
+    <form action="/ratings" method="post">
+      <fieldset>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="1" name="soup">
+            Soup
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="1" name="lunch">
+            Lunch
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="1" name="dinner">
+            Dinner
+          </label>
+        </div>
+      </fieldset>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+
+{% endblock %}

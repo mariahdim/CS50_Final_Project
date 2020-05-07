@@ -1,0 +1,56 @@
+<!--DISPLAY OF MENU INTO CARDS-->
+<div class = "row">
+    <div class="column">
+        <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+            <div class="card-header">SOUP</div>
+            <div class="card-body">
+                <h4 class="card-title">Soup of the Day</h4>
+                <ul>
+                    {% for item in (soups[2]) %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+            <div class="card-header">LUNCH</div>
+            <div class="card-body">
+                <h4 class="card-title">Entrees</h4>
+                <ul>
+                    {% for item in (lunches[2]) %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <h4 class="card-title">Dessert</h4>
+                <ul>
+                    {% for item in (dessert_lunches[2]) %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+            <div class="card-header">DINNER</div>
+            <div class="card-body">
+                <h4 class="card-title">Entrees</h4>
+                <ul>
+                    {% for item in (dinners[2]) %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <h4 class="card-title">Dessert</h4>
+                <ul>
+                    {% for item in (dessert_dins[2]) %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

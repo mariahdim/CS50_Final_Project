@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Faves
+{% endblock %}
+
+{% block main %}
+
+    <div class="container" id="container1">
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="text-center">Today's Rating<span class="glyphicon glyphicon-saved pull-right"></span></h4>
+            </div>
+
+            <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item">
+                    <div class="skillLineDefault">
+                        <div class="skill pull-left text-center">Soup</div>
+                        <div class="rating" id="rate1"></div>
+                    </div>
+                </li>
+                <li class="list-group-item text-center">
+                    <div class="skillLineDefault">
+                        <div class="skill pull-left text-center">Lunch</div>
+                        <div class="rating" id="rate2"></div>
+                    </div>
+                </li>
+
+                <li class="list-group-item text-center">
+                    <div class="skillLineDefault">
+                        <div class="skill pull-left text-center">Dinner</div>
+                        <div class="rating" id="rate3"></div>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="panel-footer text-center">
+                <button type="button" class="btn btn-primary btn-lg btn-block" type="submit">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- you need to include the shieldui css and js assets in order for the charts to work -->
+<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+
+<script type="text/javascript">
+    initializeRatings();
+
+    function initializeRatings() {
+        $('#rate1').shieldRating({
+            max: 5,
+            step: 1,
+            markPreset: false
+        });
+        $('#rate2').shieldRating({
+            max: 5,
+            step: 1,
+            // value: 6,
+            markPreset: false
+        });
+        $('#rate3').shieldRating({
+            max: 5,
+            step: 1,
+            // value: 4.5,
+            markPreset: false
+        });
+    }
+</script>
+
+{% endblock %}

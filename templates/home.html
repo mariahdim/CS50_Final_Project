@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <div class="jumbotron container-fluid">
+        <h3 class="display-3 text-primary">Hello, there!</h3>
+        <p class="lead">Here is the food forecast for the week.</p>
+    </div>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#today">Today</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#day2">{{ nice_dates[1] }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#day3">{{ nice_dates[2] }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#day4">{{ nice_dates[3] }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#day5">{{ nice_dates[4] }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#day6">{{ nice_dates[5] }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#day7">{{ nice_dates[6] }}</a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade show active" id="today">
+            {% include "food-day1.html" %}
+        </div>
+        <div class="tab-pane fade" id="day2">
+            {% include "food-day2.html" %}
+        </div>
+        </div>
+        <div class="tab-pane fade" id="day3">
+            {% include "food-day3.html" %}
+        </div>
+        </div>
+        <div class="tab-pane fade" id="day4">
+            {% include "food-day4.html" %}
+        </div>
+        </div>
+        <div class="tab-pane fade" id="day5">
+            {% include "food-day5.html" %}
+        </div>
+        </div>
+        <div class="tab-pane fade" id="day6">
+            {% include "food-day6.html" %}
+        </div>
+        </div>
+        <div class="tab-pane fade" id="day7">
+            {% include "food-day7.html" %}
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+{% endblock %}
